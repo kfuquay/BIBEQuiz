@@ -116,35 +116,57 @@ header {
     padding: 14px 19px 14px 19px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     position: absolute;
-    bottom: 0vh;
+    bottom: 0;
+    left: 0;
 }
 
-h2 {
-    margin-bottom: 5vh;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.response,
+h2,
 .question {
+    margin-bottom: 5vh;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.response {
     font-size: 15px;
     line-height: 25px;
-    margin-bottom: 3vh;
 }
+
 
 label {
     font-size: 15px;
     line-height: 3vh;
+    padding: 1vh;
+    margin: 1vh;
 }
 
+
 /* MEDIA QUERIES */
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 600px) {
     .button {
-        position: static;
-        margin-top: 1vh;
+        bottom: 0;
+        right: 0;
     }
     body {
-        margin: 1vw;
         min-height: 120vh;
+    }
+    .gameData {
+        display: block;
+        align-items: center;
+    }
+    #score,
+    #questionCount {
+        padding: 1vh;
+    }
+    header {
+        font-size: 24px;
+        margin: 1vh 3vw;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .quizBox {
+        width: 80vw;
+        height: 60vh;
     }
 }

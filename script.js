@@ -157,7 +157,6 @@ function handleQuestions() {
     if (currentQuestion < STORE.length) {
         handleScoreData();
         $('.quizBox').html(`
-        <h2>Question ${currentQuestion + 1} of ${STORE.length}</h2>
         <form>
             <fieldset>
                 <legend class="question">${STORE[currentQuestion].question}</legend>
