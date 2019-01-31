@@ -97,7 +97,7 @@ header {
     grid-row: 4;
     grid-column: 2;
     height: 50vh;
-    width: 40vw;
+    width: 60vw;
     padding: 10px;
     position: relative;
 }
@@ -124,49 +124,16 @@ h2,
 .question {
     margin-bottom: 5vh;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .response {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 
-label {
-    font-size: 15px;
-    line-height: 3vh;
-    padding: 1vh;
+input[type="radio"] {
+    font-size: 14px;
     margin: 1vh;
-}
-
-
-/* MEDIA QUERIES */
-@media only screen and (max-width: 600px) {
-    .button {
-        bottom: 0;
-        right: 0;
-    }
-    body {
-        min-height: 120vh;
-    }
-    .gameData {
-        display: block;
-        align-items: center;
-    }
-    #score,
-    #questionCount {
-        padding: 1vh;
-    }
-    header {
-        font-size: 24px;
-        margin: 1vh 3vw;
-    }
-    h2 {
-        font-size: 20px;
-    }
-    .quizBox {
-        width: 80vw;
-        height: 60vh;
-    }
 }
