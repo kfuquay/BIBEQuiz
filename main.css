@@ -96,8 +96,8 @@ header {
 .quizBox {
     grid-row: 4;
     grid-column: 2;
-    height: 50vh;
-    width: 60vw;
+    height: 55vh;
+    width: 70vw;
     padding: 10px;
     position: relative;
 }
