@@ -27,7 +27,7 @@ const STORE = [
         answerThree: 'Chihuahuan Desert',
         answerFour: 'Mojave Desert',
         correctAnswer: 'Chihuahuan Desert',
-        response: 'Big Bend National Park contains the most representative expample of the Chihuahuan Desert ecosystem in the United States'
+        response: 'Big Bend National Park contains the most representative expample of the Chihuahuan Desert ecosystem in the United '
     },
     {
         question: 'Which of the following is an indicator plant species of the Chihuahuan desert?',
@@ -97,6 +97,7 @@ const STORE = [
 let currentScore = 0;
 let currentQuestion = 0;
 
+
 //DEFINE FUNCTIONS
 function handleNext() {
     $('.nextButton').on('click', function(e) {
@@ -113,7 +114,7 @@ function generateCorrectFeedback() {
     $('.quizBox').html(`
     <h2>Your Answer Was Correct!</h2>
     <p class="response">${STORE[currentQuestion].response}</p>
-    <button type="submit" class="nextButton button">»</button>`);
+    <button type="submit" class="nextButton button" id="button">NEXT</button>`);
     currentQuestion++;
     handleNext();
 }
@@ -124,7 +125,7 @@ function generateIncorrectFeedback() {
     $('.quizBox').html(`
     <h2>Your Answer Was Incorrect!</h2>
     <p class="response">${STORE[currentQuestion].response}</p>
-    <button type="submit" class="nextButton button">»</button>`);
+    <button type="submit" class="nextButton button" id="button">NEXT</button>`);
     currentQuestion++;
     handleNext();
 }
@@ -160,8 +161,8 @@ function handleQuestions() {
         <form>
             <fieldset>
                 <legend class="question">${STORE[currentQuestion].question}</legend>
-                <input type="radio" name="question" id="answer-one" value="${STORE[currentQuestion].answerOne}" checked>
-                <label for="answer-one">${STORE[currentQuestion].answerOne}</label>
+                <input type="radio" name="question" id="answer-one" value="${STORE[currentQuestion].answerOne}" required>
+                <label f    or="answer-one">${STORE[currentQuestion].answerOne}</label>
                 <br>
                 <input type="radio" name="question" id="answer-two" value="${STORE[currentQuestion].answerTwo}">
                 <label for="answer-two">${STORE[currentQuestion].answerTwo}</label>
@@ -172,7 +173,7 @@ function handleQuestions() {
                 <input type="radio" name="question" id="answer-four" value="${STORE[currentQuestion].answerFour}">
                 <label for="answer-four">${STORE[currentQuestion].answerFour}</label>
             </fieldset>
-        <button type="submit" class="submitButton button" id="submitButton">»</button>
+        <button type="submit" class="submitButton button" id="button">SUBMIT</button>
         </form>
         `);
         handleSubmit();
@@ -180,7 +181,7 @@ function handleQuestions() {
         $('.quizBox').html(`
             <h2>You have completed the quiz!</h2>
             <p class="response">Your score was ${currentScore} out of 10</p>
-            <button type="button" class="restartButton button">↺</button>
+            <button type="button" class="restartButton button" id="button">RESTART</button>
         `);
         $('.restartButton').on('click', function() {
             location.reload();
